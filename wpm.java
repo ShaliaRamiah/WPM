@@ -44,6 +44,7 @@ public class wpm {
 
         System.out.println("your words per minute is " + wpm);
 
+        scan.close();
 	}
 
 }
