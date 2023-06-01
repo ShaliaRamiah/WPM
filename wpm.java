@@ -1,4 +1,5 @@
 import java.util.Random;
+import java.util.Scanner;
 import java.util.concurrent.TimeUnit;
 
 public class wpm {
@@ -17,7 +18,21 @@ public class wpm {
 		TimeUnit.SECONDS.sleep(1);
 		
 		Random random = new Random();
-		System.out.println(words[random.nextInt(8)]);
+        for(int i= 0; i< 9; i++){
+            System.out.print(words[random.nextInt(8)] + " ");       
+        } 
+
+        System.out.println();
+
+        Scanner scan = new Scanner(System.in);
+        String wordsTyped = scan.nextLine();
+
+
+        System.out.println(wordsTyped);
+
+		
+
+        
 
 
 	}
