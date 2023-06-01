@@ -18,29 +18,31 @@ public class wpm {
 		System.out.println("1");
 		TimeUnit.SECONDS.sleep(1);
 		
+
+        //random number generator
 		Random random = new Random();
-        for(int i= 0; i< 9; i++){
-            System.out.print(words[random.nextInt(8)] + " ");       
+        for(int i= 0; i< 8; i++){
+            System.out.print(words[random.nextInt(7)] + " ");       
         } 
 
-        double begin = LocalTime.now().toNanoOfDay();
+        double begin = LocalTime.now().toNanoOfDay(); //start timer (double = double variable)
 
-        System.out.println();
+        System.out.println(); //printing a new line 
 
         Scanner scan = new Scanner(System.in);
         String wordsTyped = scan.nextLine();
 
 
-        double finish = LocalTime.now().toNanoOfDay();
-        double time = finish - begin;
-        double seconds = time / 1000000000.0;
-        int characters = wordsTyped.length();
+        double finish = LocalTime.now().toNanoOfDay(); //ending timer
+        double time = finish - begin; //subtracting the difference
+        double seconds = time / 1000000000.0; //convert it to seconds
+        int characters = wordsTyped.length(); //number of input characters
 
         //wpm formula
         //(x characters / 5) / 1 min = y wpm
         int wpm = (int) ((((double) characters / 5) / seconds)* 60);
 
-        System.out.println("your words per minute is" + wpm);
+        System.out.println("your words per minute is " + wpm);
 
 	}
 
